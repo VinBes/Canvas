@@ -9,6 +9,35 @@ let canvasDraft = document.getElementById("canvas-draft");
 let contextDraft = canvasDraft.getContext("2d");
 let currentFunction;
 let dragging = false;
+let savePointArray = [];
+let redoArray = [];
+let step = -1;
+let startBackgroundColor = "White";
+
+// ===========Width of the Canvas==========
+canvasReal.width = window.innerWidth / 1.3;
+canvasDraft.width = window.innerWidth / 1.3;
+
+window.addEventListener("resize", function () {
+  canvasReal.width = window.innerWidth / 1.3;
+  canvasDraft.width = window.innerWidth / 1.3;
+});
+
+//==============Styling===================
+function strokeStyle() {
+  contextReal.strokeStyle = $(".stroke-color-input").val();
+  contextDraft.strokeStyle = $(".stroke-color-input").val();
+}
+function fillStyle() {
+  contextReal.fillStyle = $(".fill-color-input").val();
+  contextDraft.fillStyle = $(".fill-color-input").val();
+}
+function lineWidth() {
+  contextReal.lineWidth = $("#line-width").val();
+  contextDraft.lineWidth = $("#line-width").val();
+}
+
+//==============Mouse Events===================
 
 $("#canvas-draft").mousedown(function (e) {
   let mouseX = e.offsetX;

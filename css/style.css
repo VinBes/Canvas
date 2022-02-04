@@ -1,18 +1,61 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .canvas {
   border: 1px black dotted;
   position: absolute;
-  top: 0px;
+  top: 70px;
   bottom: 0px;
-  left: 0px;
+  left: 255px;
   right: 0px;
 }
 
 #canvas-draft {
   background-color: transparent;
 }
-body {
-  overflow: hidden;
-}
+
 #canvas-container {
   height: 720px;
+}
+
+/*---------------Interface----------------*/
+.canvas-buttons {
+  height: 35vh;
+}
+.interface-slider {
+  width: 100%;
+}
+.slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 50%;
+  height: 10px;
+  outline: none;
+  opacity: 0.5;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: darkgrey;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: url();
+  cursor: pointer;
+  border-radius: 50%;
 }
