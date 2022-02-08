@@ -12,6 +12,3 @@ function saveImageAs() {
     link.remove();
   }
 }
-
-// currently it works, however it would be more user friendly if we could figure out the use
-// of a modal that has input boxes.

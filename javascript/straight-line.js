@@ -9,12 +9,14 @@ class StraightLine extends PaintFunction {
 
   onMouseDown(coord, event) {
     this.contextReal.strokeStyle = strokeStyle();
+    this.contextDraft.strokeStyle = strokeStyle();
+    this.contextReal.lineWidth = lineWidth();
+    this.contextDraft.lineWidth = lineWidth();
     this.origX = coord[0];
     this.origY = coord[1];
   }
 
   onDragging(coord, event) {
-    this.contextDraft.strokeStyle = strokeStyle();
     this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     this.contextDraft.beginPath();
     this.contextDraft.moveTo(this.origX, this.origY);

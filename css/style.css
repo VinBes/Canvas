@@ -2,6 +2,9 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  background-image: url(/FTWD_Web_Day_14/assets/canvas_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .canvas {
@@ -9,22 +12,74 @@ body {
   position: absolute;
   top: 70px;
   bottom: 0px;
-  left: 255px;
+  left: 325px;
   right: 0px;
+  border-radius: 15px;
 }
 
 #canvas-draft {
   background-color: transparent;
+  border-radius: 15px;
 }
 
 #canvas-container {
   height: 720px;
 }
-
-/*---------------Interface----------------*/
-.canvas-buttons {
-  height: 35vh;
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 55px;
+  color: rgb(41, 44, 45);
+  text-shadow: white 15px 0 15px;
 }
+
+/*======================Interface=======================*/
+
+.interface-container {
+  margin-left: 15px;
+}
+.draw-button-container {
+  height: 35vh;
+  background-color: rgb(61, 57, 57, 0.8);
+  border-radius: 15px;
+  margin-top: 10px;
+}
+.other-button-container {
+  height: 10vh;
+  background-color: rgb(61, 57, 57, 0.8);
+  border-radius: 15px;
+  margin-top: 10px;
+}
+.slider-container {
+  background-color: rgb(61, 57, 57, 0.8);
+  border-radius: 15px;
+  margin-top: 10px;
+  font-family: "Oswald";
+}
+.colors-container {
+  height: 10vh;
+  background-color: rgb(61, 57, 57, 0.8);
+  border-radius: 15px;
+  margin-top: 10px;
+  font-family: "Oswald";
+}
+.btn {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  padding: 6px 0;
+  color: white;
+  background-color: rgb(58, 62, 63);
+  border-radius: 20px;
+}
+.drawbuttons {
+  width: 45px;
+  height: 45px;
+  border-radius: 25px;
+}
+.left-column {
+  justify-items: end;
+}
+
 .interface-slider {
   width: 100%;
 }
@@ -58,4 +113,13 @@ body {
   background: url();
   cursor: pointer;
   border-radius: 50%;
+}
+
+.form-select {
+  appearance: none;
+  background-color: rgb(58, 62, 63);
+  color: white;
+  border: none;
+  font-family: inherit;
+  outline: none;
 }
