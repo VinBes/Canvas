@@ -15,12 +15,15 @@ let step = -1;
 let startBackgroundColor = "White";
 
 // ===========Width of the Canvas==========
+
 canvasReal.width = window.innerWidth / 1.3;
 canvasDraft.width = window.innerWidth / 1.3;
 
 window.addEventListener("resize", function () {
   canvasReal.width = window.innerWidth / 1.3;
   canvasDraft.width = window.innerWidth / 1.3;
+  contextReal.fillStyle = startBackgroundColor;
+  contextReal.fillRect(0, 0, canvasReal.width, canvasReal.height);
 });
 
 //==============Styling===================
@@ -35,6 +38,10 @@ function fillStyle() {
 function lineWidth() {
   contextReal.lineWidth = $("#line-width").val();
   contextDraft.lineWidth = $("#line-width").val();
+}
+function textSize() {
+  contextReal.font = `${$("#text-size").val()}px ${$(".form-select").val()}`;
+  contextDraft.font = `${$("#text-size").val()}px ${$(".form-select").val()}`;
 }
 
 //==============Mouse Events===================

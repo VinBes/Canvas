@@ -1,4 +1,4 @@
-//========== Undo ==================
+//========== Undo, Redo & Savepoint ==================
 function saveToSavePoint() {
   step++;
   if (step < savePointArray.length) {
@@ -11,24 +11,25 @@ function saveToSavePoint() {
 }
 
 //this makes the undo button work.
-//(the undo from step 0 to -1 throws an error, but does not impact functionality)
 $("#other-undo").click(() => {
-  contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height);
-  step--;
-  redoArray.push(savePointArray.pop());
-  contextReal.putImageData(savePointArray[step], 0, 0);
-  console.log(`undo complete step:${step}`);
-  // if (step <= 0) {
-  //   contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height);
-  //   step--;
-  //   console.log(step);
-  // } else {
-  //   contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height);
-  //   step--;
-  //   redoArray.push(savePointArray.pop());
-  //   contextReal.putImageData(savePointArray[step], 0, 0);
-  //   console.log(`undo complete step:${step}`);
-  // }
+  if (savePointArray.length == 0) {
+    console.log("no more undo");
+  } else if (step <= 0) {
+    console.log("no more steps to undo");
+    console.log(step);
+    console.log(redoArray);
+    redoArray.push(savePointArray.pop());
+    contextReal.fillStyle = startBackgroundColor;
+    contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height);
+    contextReal.fillRect(0, 0, canvasReal.width, canvasReal.height);
+    step = -1;
+  } else {
+    contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height);
+    step--;
+    contextReal.putImageData(savePointArray[step], 0, 0);
+    redoArray.push(savePointArray.pop());
+    console.log(`undo complete step:${step}`);
+  }
 });
 
 //this makes the redo button work.(however only 1 time)
@@ -41,5 +42,6 @@ $("#other-redo").click(() => {
     redoArray.pop();
     saveToSavePoint();
     console.log(`redo complete step:${step}`);
+    console.log(redoArray);
   }
 });

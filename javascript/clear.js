@@ -1,3 +1,4 @@
+//========== Clear canvas functionality ==================
 $("#other-clear").click(() => {
   if (confirm("Are you sure you wish to clear your canvas and start over?")) {
     contextReal.fillStyle = startBackgroundColor;
@@ -6,8 +7,9 @@ $("#other-clear").click(() => {
     savePointArray = [];
     redoArray = [];
     step = -1;
+    bezierMouseDownCounter = 0;
+    bezierDragCounter = 0;
+    bezierMouseUpCounter = 0;
     console.log("Canvas cleared, variables reset");
   }
 });
-
-// probably needs to clear the undo and redo arrays as well
