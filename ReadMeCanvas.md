@@ -77,5 +77,4 @@ _Features to be implemented:_
 _Bugs to fix:_
 
 - [ ] improve usability by addingh mouseleave and mouseenter events to all features that allow a smoother transition if the user accidentally moves the mouse out of the canvas
-- [ ] eraser currectly removes default background color. This creates an issue for the user, the fillbucket and download function.
 - [ ] fillbucket crashes on transparant pixels
