@@ -7,9 +7,11 @@ Welcome to the ReadMe of our Canvas Application. This ReadMe contains two sectio
 This is the guide for proper use of our Canvas application. We are happy you chose to make use of our web-based drawing application. It is easy to use, all you need is a mouse! You can use the interface on the left side of the screen to switch between the different features. Bellow you will find a brief instruction for each seperate feature.
 
 ===========Interface layout===========
+
 The interface layout is made out of 4 subsections. The first subsection contains non-drawing features such as undo, redo, saveImage, clear canvas and load image. The second subsection contains all the different ways to draw on the canvas. The third subsection allows you to change the line thickness and the size of the letters. The fourth and final section contains color selection tools so you can pick your favorite color to draw with.
 
 ===========Interface top section===========
+
 Undo & Redo:
 With these buttons you can correct any drawing mistake you make. Every line you draw or shape you make we keep track of. This means you can take it step by step and simply click the undo button to go back. The undo button is the button on the left side of the first interface subsection marked by a curly arrow.
 The redo button is marked by the same arrow and is next to the undo button. This button allows you to redraw any step that you removed by clicking undo before. This will come in handy when you accidentally click undo to often!
@@ -23,6 +25,7 @@ The button with the X icon will clear the entire canvas and allow you to start o
 Load Image:
 
 ===========Interface drawing section===========
+
 Drawing Rectangle:
 Click and drag to draw a rectangle onto the canvas. Your get a preview to see if you like what you are drawing. Release the mouse to make the final draw of the rectangle. Button is on the top left.
 
@@ -54,11 +57,13 @@ Eraser:
 Any artist sometimes needs to carefully use an eraser in order to make a perfect drawing. Use the eraser to carefully erase what you have drawn. Click and drag to start erasing. You can adjust the size of the eraser by adjusting the line width slider in the subsection bellow.
 
 ===========Interface slider section===========
+
 In the third subsection of the interface you will find two sliders. The first slider adjusts the line width. This will affect the thickness of the lines you will draw with. This will mean that your rectangle, circle and other shapes will have thicker (or thinner) lines. You can also use it to increase the size of your eraser.
 
 The second slider is used to adjust the size of the letters you can draw by using the text feature.
 
 ===========Interface selection section===========
+
 In the bottom subsection of the interface you will be able to pick the colors for your drawing. These colors will apply to any of the drawing features. Use stroke color to select what color will be used for any of the shapes, lines, curves or text. The fillcolor is used for the fillbucket.
 There is a dropdown menu for fonts that will allow you to select a font for the text feature.
 
